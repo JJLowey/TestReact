@@ -1,0 +1,65 @@
+body, #root
+{
+    font-family: "Open Sans",Helvetica,Arial,sans-serif!important;
+    color: #444;
+    height: 100vh;
+    background-color: #0b76c5;
+}
+
+.container
+{
+
+    padding-top: 10vh;
+    z-index: 15px;
+}
+
+.searchContainer
+{
+    max-width: 475px;
+    background-color: #f3ce56;
+    border-radius: 4px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.searchContainer h1
+{
+    font-size: 24px!important;
+    padding-bottom: 5px;
+    font-weight: 700px;
+}
+
+#resultsContainer
+{
+    list-style-type: none;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+#resultsContainer li
+{
+    margin-top: 5px;
+}
+
+.title
+{
+    font-weight: 700!important;
+}
+
+.sub-title
+{
+    font-weight: 500;
+}
+
+#pickUpInput
+{
+    margin-bottom: 0px;
+}
+
+.title, .sub-title
+{
+    color: #fff;
+    text-align: center;
+    line-height: 1.2em;
+}

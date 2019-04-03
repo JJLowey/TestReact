@@ -1,0 +1,23 @@
+input
+{
+    padding: 16px 8% 16px 2%!important;
+    padding-top: 16px !important;
+    padding-right: 8% !important;
+    padding-bottom: 16px !important;
+    padding-left: 2% !important;
+}
+
+label
+{
+    text-shadow: none;
+    font-size: 0.875em;
+}
+
+.loading
+{
+    background-color: #ffffff;
+    background-image: url("https://cdn2.rcstatic.com/images/site_graphics/newsite/preloader64.gif");
+    background-size: 25px 25px;
+    background-position:right center;
+    background-repeat: no-repeat;
+}
