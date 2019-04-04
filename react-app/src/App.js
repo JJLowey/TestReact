@@ -6,12 +6,18 @@ import SearchBar from './Components/SearchBar/SearchBar';
 
 class App extends React.Component
 {
-    // Set State, defining results as an empty array
-    state = { loading: false, results: [] };
+    // Set State, defining loading boolean & results as an empty array
+    state = {loading: false, term: "", results: [] };
 
     // Called on change of SearchBar component input change
     onSearchChange = async (term) =>
     {
+        // Save the term, reset the array
+        this.setState({term: term});
+
+        // Declare array to be populated
+        var responseItemArray = [];
+
         // If two or more charcaters have been typed
         if(term.length >= 2)
         {
@@ -28,9 +34,6 @@ class App extends React.Component
                     solrTerm: term
                 }
             });
-
-            // Declare array to be populated
-            var responseItemArray = [];
 
             if(response.data.results.numFound > 0)
             {
@@ -55,8 +58,9 @@ class App extends React.Component
             
             // Set the state of the results from async request. 
             // SetState calls render() to show results
-            this.setState({loading: false, results: responseItemArray});
         }
+
+        this.setState({loading: false, results: responseItemArray});
     }
 
     render()
@@ -68,7 +72,8 @@ class App extends React.Component
                 <div className="searchContainer"> 
                     <h1> Where are you going?</h1>
                     <SearchBar loading={this.state.loading} onChange={this.onSearchChange}/>
-                    <ul id="resultsContainer">
+                    <ul id="resultsContainer" 
+                        className={ (this.state.term.length < 2 && this.state.loading === true) ? "hidden" : ""}>
                         {this.state.results}
                     </ul>
                 </div>
