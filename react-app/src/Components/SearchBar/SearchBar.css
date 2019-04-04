@@ -9,6 +9,13 @@ input
     border-radius: 0!important;;
 }
 
+/* Identical to Bootstrap */
+input:focus 
+{
+    outline-offset: -2px;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
 label
 {
     text-shadow: none;
