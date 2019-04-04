@@ -1,24 +1,13 @@
+import App from './App';
+
 test('fake Test', () => {
   expect(true).toBeTruthy()
 });
 
-test('render a label', () => {
-  const wrapper = shallow(
-      <Label>Hello Jest!</Label>
-  );
-  expect(wrapper).toMatchSnapshot();
-});
-
-test('render a small label', () => {
-  const wrapper = shallow(
-      <Label small>Hello Jest!</Label>
-  );
-  expect(wrapper).toMatchSnapshot();
-});
-
-test('render a grayish label', () => {
-  const wrapper = shallow(
-      <Label light>Hello Jest!</Label>
-  );
-  expect(wrapper).toMatchSnapshot();
+describe('Testing App root component', () => {
+   
+  it('sums numbers', () => {
+      expect(1 + 2).toEqual(3);
+      expect(2 + 2).toEqual(4);
+   });
 });
