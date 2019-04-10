@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import renderer from 'react-test-renderer'
 import { shallow, mount } from 'enzyme';
 import SearchBar from './SearchBar';
 
@@ -7,6 +8,13 @@ import SearchBar from './SearchBar';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
+
+it('Has not changed?', () => 
+{
+  // Check if the component has changed? Snapshot is deep, not shallow
+  const tree = renderer.create(<SearchBar/>).toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 it('Check SearchBar Component Renders', () => 
 {
@@ -32,6 +40,11 @@ describe('Testing SearchBar Component', () =>
     {
         const rootComponent = shallow(<SearchBar/>);
         expect(rootComponent.find('input').prop('placeholder')).toEqual('city, airport, station, region and district...');
+    })
+
+    it('Make sure input has set the value on change"', () => 
+    {
+
     })
 
 })

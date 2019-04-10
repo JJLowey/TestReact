@@ -20,8 +20,7 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ],
-    "setupFiles": ["./src/setupTests.js"]
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

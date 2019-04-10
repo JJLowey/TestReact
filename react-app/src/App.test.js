@@ -2,7 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer'
 import ReactDOM from 'react-dom';
 import App from './App';
-import toJson from 'enzyme-to-json';
 import { shallow, mount } from 'enzyme';
 
 // Will not recognise setupTests.js :(

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Has not changed? 1`] = `
+<div
+  className="col-xs-12"
+>
+  <form
+    className="col-xs-12"
+    onSubmit={[Function]}
+  >
+    <div
+      className="field"
+    >
+      <label
+        htmlFor="pickUpInput"
+      >
+        Pick-up Location
+      </label>
+      <input
+        autoComplete="off"
+        className="form-control col-xs-12 "
+        id="pickUpInput"
+        onChange={[Function]}
+        placeholder="city, airport, station, region and district..."
+        type="text"
+      />
+    </div>
+  </form>
+</div>
+`;
